@@ -1,0 +1,42 @@
+        <!-- ================================================================
+                                ClearFix Snippet
+
+                Shows how clearfix fixes the child div float problem
+                with two examples. One applies the class clearfix and
+                the other doesn't, showing the difference.
+
+                Refs: 
+                http://www.thomasrudy.com/the-css-clearfix-hack-explained/
+        ================================================================== -->
+
+        <!doctype html>
+        <head>
+        <style>
+        	.myWrapper{ background:green; margin: 10px 50px 150px 50px;}
+        	.myHeader{ height:50px;background:grey; color:#fff;}
+        	.myContent{ color:#fff; }
+        	.myLeftDiv{ width:200px; background:red; float:left; color:#fff;}
+        	.myRightDiv{ width:200px; background:blue; float:right; color:#fff;}
+		.clearfix:after{ content: ""; display: table; clear: both;}
+        </style>
+        </head>
+        <body>
+        <div class="myWrapper">
+        	<div class="myHeader">Header</div>
+        		<div class="myContent">
+				<p>This is the content</p>
+        		<div class="myLeftDiv">Left Div</div>
+        		<div class="myRightDiv">Right Div</div>
+        	</div>
+        </div>
+
+        <div class="myWrapper">
+                <div class="myHeader">Header</div>
+                        <div class="myContent clearfix">
+                                <p>This is the content (Using clearfix)</p>
+                        <div class="myLeftDiv">Left Div</div>
+                        <div class="myRightDiv">Right Div</div>
+                </div>
+        </div>
+        </body>
+        </html>

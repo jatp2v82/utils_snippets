@@ -1,0 +1,75 @@
+<!doctype html>
+    <head>
+        <style>
+            div.container {
+                border: 1px solid #000000;
+                background-color: #D9D2D5;
+                width: 50%;
+                margin: 0 auto;
+                margin-top: 40px;
+                margin-bottom: 200px;
+                padding: 5px;
+            }
+            .meth1{
+                /*
+                overflow: auto;
+                min-height: contain-floats;
+                */
+                overflow: hidden;
+
+            }
+        
+            div.left {
+                width: 45%;
+                float: left;
+                background-color: #A1DDF7;
+            }
+        
+            div.right {
+                width: 45%;
+                float: right;
+                background-color: #BEF7A1;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Problem case -->
+        <div class="container">
+            <p>
+                <b>Problem: </b>The height of the parent container does not stretch properly
+                to wrap the child containers inside...
+            </p>
+            <div class="left">
+                <p>The left column.</p>
+                <p>The left column.</p>
+                <p>The left column.</p>
+                <p>The left column.</p>
+            </div>
+            <div class="right">
+                <p>The right column.</p>
+                <p>The right column.</p>
+                <p>The right column.</p>
+            </div>
+        </div>
+
+        <!-- Fixed solution -->
+        <div class="container meth1">
+            <p>
+                <b>Solution: </b> Overflow:hidden/auto | 
+                Modern browsers: min-height: contain-floats<br>
+                (old solution: clearfix).
+            </p>
+            <div class="left">
+                <p>The left column.</p>
+                <p>The left column.</p>
+                <p>The left column.</p>
+                <p>The left column.</p>
+            </div>
+            <div class="right">
+                <p>The right column.</p>
+                <p>The right column.</p>
+                <p>The right column.</p>
+            </div>
+        </div>
+    </body>
+</html>
