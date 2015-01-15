@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+		<title>Testing...</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="file where I test my learning...">
+		<meta name="keywords" content="HTML,CSS,JavaScript, Learn, Study">
+		<meta name="author" content="JPerez">
+
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script>
+			$(document).scroll(function() {
+				var useFixedSidebar = $(document).scrollTop() > 100;
+				$('.nav').toggleClass('nav2', useFixedSidebar);
+			});
+		</script>
+
+		<style>
+			a:link {color: black; text-decoration: none; background-color: #fff;
+			        border: 1px solid grey; padding: 2px;}
+			a:hover {background-color: #FFE6E6; font-size: 1em; 
+			        outline-style: double; outline-color: black;}
+			a:visited {color: grey;}
+
+			.header {
+			    background-color:black;
+			    color:white;
+			    text-align:center;
+			    padding:5px;
+			}
+			.nav {
+			    line-height:30px;
+			    background-color:#eeeeee;
+			    height:300px;
+			    width:100px;
+			    float:left;
+			    padding:5px;
+			}
+			/*Class we will toggle to when reached the scroll position we indicated*/
+			.nav2 {
+				position: fixed;
+				top: 5px;
+				background-color:#ffffaa;
+			}
+			.section {
+			    width:350px;
+			    padding:10px;
+			    /*This will center the whole div*/
+			    margin-left: auto;
+			    margin-right: auto;
+			    /* float:left; */
+			}
+			.section h1{
+			    color:grey;
+			    text-align: center;
+
+			}
+			.footer {
+			    background-color:black;
+			    color:white;
+			    clear:both;
+			    text-align:center;
+			    padding:5px;
+			}
+			.content {
+				min-height: 800px;
+			}
+		</style>
+		<script>
+
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Fix by Scroll (Menu)</h1>
+		</div>
+
+		<div class="content">
+			<div class="nav">
+				<a href="">Menu1</a><br>
+				<a href="">Menu2</a><br>
+				<a href="">Menu3</a><br>
+			</div>
+
+			<div class="section">	
+				<h1>Lorem ipsum</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar non lectus in mattis. Vivamus elit risus, vestibulum sed commodo id, mattis semper urna. Phasellus sit amet magna tempor, ullamcorper libero ut, gravida ipsum. Duis justo ante, rhoncus et purus a, sagittis mollis diam. Proin posuere, mi egestas bibendum congue, eros mauris egestas est, sed efficitur nunc purus quis elit. Phasellus non lobortis elit. Nullam eu urna arcu. 
+				</p>
+				<p>
+					Donec nec dapibus lectus. Fusce lectus mi, sollicitudin non orci at, tincidunt tincidunt ex. Morbi blandit ipsum at dignissim commodo. Mauris finibus vehicula nisl.
+				</p>
+			</div>
+		</div>
+
+		<div class="footer">
+			Copyright © jperez
+		</div>
+	</body>
+</html>
